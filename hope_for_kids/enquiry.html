@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enquire about Hope for Kids services, volunteering opportunities, or sponsorship options.">
+  <meta name="keywords" content="children charity, volunteer, sponsor, educational programs, counselling, community outreach">
+  <title>Hope for Kids - Enquiry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Hope for Kids</h1>
+    <p>Making a difference in children's lives</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products_service.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="enquiry.html" class="active">Enquire</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>Service Enquiry</h2>
+    <p>Interested in our services, volunteering, or sponsorship opportunities? Please fill out the form below and we'll get back to you with more information.</p>
+
+    <form id="enquiry-form">
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label for="enquiry-type">Enquiry Type *</label>
+        <select id="enquiry-type" name="enquiry-type" required>
+          <option value="">Please select</option>
+          <option value="educational">Educational Programs</option>
+          <option value="counselling">Counselling Services</option>
+          <option value="volunteer">Volunteering</option>
+          <option value="sponsor">Sponsorship</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Enquiry *</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Please provide details about your enquiry..."></textarea>
+      </div>
+
+      <button type="submit">Submit Enquiry</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hope for Kids | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

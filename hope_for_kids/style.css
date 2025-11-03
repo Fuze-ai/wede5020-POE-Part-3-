@@ -1,0 +1,293 @@
+/* ============================
+   RESET & BASE STYLES
+   ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #2a7ae2;
+  --secondary: #f4f4f9;
+  --text: #333;
+  --light: #fff;
+  --max-width: 1100px;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --success: #4CAF50;
+  --error: #f44336;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: var(--primary);
+  color: var(--light);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+}
+
+/* ============================
+   NAVIGATION
+   ============================ */
+nav {
+  background: #1f5dab;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0.5rem;
+}
+
+nav ul li a {
+  color: var(--light);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: var(--light);
+  color: var(--primary);
+}
+
+/* ============================
+   MAIN CONTAINER
+   ============================ */
+.container {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 1rem;
+  background: var(--light);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.container h2 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+ul {
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+button {
+  background: var(--primary);
+  color: var(--light);
+  cursor: pointer;
+  transition: background 0.3s;
+  border: none;
+}
+
+button:hover {
+  background: #1f5dab;
+}
+
+/* ============================
+   GALLERY
+   ============================ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.02);
+}
+
+/* ============================
+   LIGHTBOX
+   ============================ */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: auto;
+}
+
+.lightbox-close:hover {
+  color: #ccc;
+}
+
+/* ============================
+   FORM STYLES
+   ============================ */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.error {
+  color: var(--error);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  display: none;
+}
+
+.success-message {
+  background: #dff0d8;
+  color: #3c763d;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+/* ============================
+   SEARCH FUNCTIONALITY
+   ============================ */
+.search-container {
+  margin-bottom: 1.5rem;
+}
+
+.search-box {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-box input {
+  flex: 1;
+}
+
+.search-box button {
+  width: auto;
+  padding: 0.5rem 1rem;
+}
+
+.search-results {
+  margin-top: 1rem;
+}
+
+.service-item {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  background: #f9f9f9;
+}
+
+.service-item.hidden {
+  display: none;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+  background: var(--primary);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+   ============================ */
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    font-size: 14px;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  nav ul li a {
+    padding: 0.4rem 0.8rem;
+  }
+}
+
